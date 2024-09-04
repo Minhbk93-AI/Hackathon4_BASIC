@@ -7,10 +7,10 @@ public class CatalogValidate {
     public static int inputCatalogId(Scanner sc){
         while (true){
             try {
-                System.out.println("Enter Catalog Id");
+                System.out.println("Nhập vào Catalog Id");
                 return Integer.parseInt(sc.nextLine());
             }catch (NumberFormatException e){
-                System.err.println("You must enter a number, please try again");
+                System.err.println("Bạn phải nhập vào là số, vui lòng nhập lại");
             }
         }
 
@@ -19,10 +19,10 @@ public class CatalogValidate {
     //Validate CatalogName
     public static String inputCatalogName(Scanner sc) {
         while (true){
-            System.out.println("Enter Catalog Name");
+            System.out.println("Nhập vào Catalog Name");
             String catalogName = sc.nextLine();
             if(catalogName.trim().isEmpty()){
-                System.err.println("Product name cannot be null");
+                System.err.println("Product name không thể trống");
             }
             else{
                 return catalogName;
@@ -36,7 +36,7 @@ public class CatalogValidate {
             System.out.println("Enter Catalog Descriptions");
             String catalogDescriptions = sc.nextLine();
             if(catalogDescriptions.trim().isEmpty()){
-                System.err.println("Product descriptions cannot be null");
+                System.err.println("Product descriptions không để trống");
             }
             else{
                 return catalogDescriptions;
