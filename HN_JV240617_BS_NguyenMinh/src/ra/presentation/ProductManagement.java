@@ -47,7 +47,7 @@ public class ProductManagement {
                 case 7:
                     return;
                 default:
-                    System.err.println("Bạn chọn các số từ 1 -> 5");
+                    System.err.println("Bạn chọn các số từ 1 -> 7");
             }
         }
     }
