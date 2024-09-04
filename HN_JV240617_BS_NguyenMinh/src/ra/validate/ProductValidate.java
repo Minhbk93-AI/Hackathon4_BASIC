@@ -24,7 +24,7 @@ public class ProductValidate {
                 for(Product product: products.getAll()){
                     if(product.getProductId().equals(productId)){
                         check = true;
-                        System.err.println("ProductId already exists");
+                        System.err.println("ProductId đã tồn tại");
                         break;
                     }
                 }
@@ -32,7 +32,7 @@ public class ProductValidate {
                     return productId;
                 }
             }else{
-                System.err.println("start with letter P and add 4 characters number");
+                System.err.println("Bắt đầu bằng chữ P and thêm 4 kí tự số");
             }
         }
     }
@@ -43,7 +43,7 @@ public class ProductValidate {
             System.out.println("Enter Product Name");
             String productName = sc.nextLine();
             if(productName.trim().isEmpty()){
-                System.err.println("Product name must be not null");
+                System.err.println("Product name phải không null");
             }else{
                 return productName;
             }
@@ -60,20 +60,20 @@ public class ProductValidate {
                     productPrice = Double.parseDouble(sc.nextLine());
                     break;
                 } catch (NumberFormatException e) {
-                    System.err.println("You must enter a number, please try again");
+                    System.err.println("Bạn phải nhập là số vui lòng nhập lại");
                 }
             }
             if(productPrice > 0){
                 return productPrice;
             }else{
-                System.err.println("Product price must greater than 0");
+                System.err.println("Product price phải lớn hơn 0");
             }
         }
     }
 
     //Validate Product Descriptions
     public static String inputProductDescriptions(Scanner sc) {
-        System.out.println("Enter product description");
+        System.out.println("Nhập vào product description");
         return sc.nextLine();
     }
 
@@ -87,17 +87,17 @@ public class ProductValidate {
         while (true){
             while (true) {
                 try {
-                    System.out.println("Enter the category id you want to add");
+                    System.out.println("Nhập vào category id bạn muốn thêm vào");
                     categoryId = Integer.parseInt(sc.nextLine());
                     break;
                 } catch (NumberFormatException e) {
-                    System.err.println("You must enter a number, please try again");
+                    System.err.println("Bạn phải nhập là số, vui lòng nhập lại");
                 }
             }
             if(categories.findById(categoryId) != null){
                 return categories.findById(categoryId);
             }else{
-                System.err.println("Cant found category with Id: " + categoryId +", please try again");
+                System.err.println("Không tồn tại category với Id: " + categoryId +", vui lòng nhập lại");
             }
         }
     }
@@ -108,15 +108,15 @@ public class ProductValidate {
         while (true){
             while (true) {
                 try {
-                    System.out.println("Enter the category stock you want to add");
+                    System.out.println("Nhập vào category stock bạn muốn thêm vào");
                     categoryStock = Integer.parseInt(sc.nextLine());
                     break;
                 } catch (NumberFormatException e) {
-                    System.err.println("You must enter a number, please try again");
+                    System.err.println("Bạn phải nhập là số, vui lòng nhập lại");
                 }
             }
             if(categoryStock< 10){
-                System.err.println("Category stock must greater than 10");
+                System.err.println("Category stock phải lớn hơn 10");
             }else{
                 return categoryStock;
             }
@@ -131,7 +131,7 @@ public class ProductValidate {
             if(productStatus.equals("false") || productStatus.equals("true")){
                 return Boolean.parseBoolean(productStatus);
             }else{
-                System.err.println("status must be true or false");
+                System.err.println("status phải là true or false");
             }
         }
     }
