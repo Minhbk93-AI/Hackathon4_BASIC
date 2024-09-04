@@ -68,7 +68,7 @@ public class CatalogFeature {
             catagories.findById(catalogId).setCatalogName(newCatalogName);
             System.out.println("Cập nhật Catalog name thành công");
         }else {
-            System.out.println("Cant found catalog with id: "+catalogId);
+            System.out.println("Không thể tìm thấy catalog với id: "+catalogId);
         }
 
     }
@@ -103,7 +103,7 @@ public class CatalogFeature {
                 System.out.println("Xoá thành công");
             }
         }else{
-            System.err.println("Không tồn tại catalog with id: "+catalogId);
+            System.err.println("Không thể tìm thấy catalog with id: "+catalogId);
         }
     }
 }
