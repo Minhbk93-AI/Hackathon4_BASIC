@@ -8,8 +8,8 @@ public class BookManagement {
         while (true) {
             System.out.println("************************BASIC-MENU************************");
             System.out.println("1.Quản lý danh mục");
-            System.out.println("2.quan lý sản phẩm");
-            System.out.println("4.Thoát");
+            System.out.println("2.Quản lý sản phẩm");
+            System.out.println("3.Thoát");
             byte choice;
             while (true) {
                 try {
