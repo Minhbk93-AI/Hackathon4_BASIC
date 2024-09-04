@@ -80,7 +80,7 @@ public class ProductFeature {
                 count++;
             }
         }
-        System.out.println("Tồn tại " + count + " products");
+        System.out.println("Tìm thấy" + count + " products");
     }
 
     //Update Product by ProductId
@@ -94,7 +94,7 @@ public class ProductFeature {
         if(product.findById(productId) != null){
             product.save(product.findById(productId));
         }else{
-            System.err.println("Không tồn tại product với Id: " + productId);
+            System.err.println("Không thể tìm product với Id: " + productId);
         }
     }
 }
